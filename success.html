@@ -1,33 +1,22 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>¡Formulario enviado!</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f4f4f4;
-            text-align: center;
-        }
-        .container {
-            padding: 2rem;
-            border-radius: 8px;
-            background-color: #ffffff;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>¡Solicitud Enviada!</h1>
-        <p>Gracias por tu interés. Te contactaremos en breve para discutir el proceso.</p>
-        <a href="https://lamariano.github.io/rhgastronomico-web/" style="color: #007bff; text-decoration: none;">Volver a la página principal</a>
-    </div>
-</body>
-</html>
+<form name="employers" method="POST" netlify action="/success.html">
+  <input type="hidden" name="form-name" value="employers" />
+  <div class="mb-4">
+    <label for="company" class="block text-sm font-medium text-gray-700">Empresa</label>
+    <input type="text" id="company" name="company" class="w-full p-3 border rounded-lg" required />
+  </div>
+  <div class="mb-4">
+    <label for="contactEmail" class="block text-sm font-medium text-gray-700">Correo de Contacto</label>
+    <input type="email" id="contactEmail" name="contactEmail" class="w-full p-3 border rounded-lg" required />
+  </div>
+  <div class="mb-4">
+    <label for="position" class="block text-sm font-medium text-gray-700">Puesto a Cubrir</label>
+    <input type="text" id="position" name="position" class="w-full p-3 border rounded-lg" required />
+  </div>
+  <div class="mb-4">
+    <label for="description" class="block text-sm font-medium text-gray-700">Descripción del Puesto</label>
+    <textarea id="description" name="description" rows="4" class="w-full p-3 border rounded-lg" required></textarea>
+  </div>
+  <button type="submit" class="w-full bg-gray-800 hover:bg-gray-900 text-white py-3 rounded-lg font-semibold transition duration-300">
+    Solicitar Servicio
+  </button>
+</form>
